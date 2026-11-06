@@ -22,7 +22,7 @@ export class SafeError extends Error {
 
 const sensitivePatterns = [
   /(bearer\s+)[^\s"']+/gi,
-  /\b(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})\b/g,
+  /(\b)(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})\b/g,
 ];
 
 export function safeErrorMessage(error: unknown): string {
